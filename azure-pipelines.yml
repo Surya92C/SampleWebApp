@@ -32,3 +32,7 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: shellexec@0
+  inputs:
+    code: 'java -jar path/to/ci-driver.jar https://13.76.221.28:7443 --api-key=eMgwxEkSQTExMKuyO70Na4NHNHHfE72o --site-id=1 --min-severity=high --min-confidence=certain --report-file=scan-report.html --report-type=summary'
